@@ -20,7 +20,7 @@
         <p>{{ post.text|linebreaksbr }}</p>
     </div>
 <hr>
-{{% for comment in post.comments.all %}
+{% for comment in post.comments.all %}
     {% if user.is_authenticated or comment.approved_comment %}
     <div class="comment">
         <div class="date">
